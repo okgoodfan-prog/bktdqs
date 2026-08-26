@@ -139,7 +139,26 @@
 <p>XXX</p>
 </section>
 
-<footer>半块土豆切丝的个人空间</footer>
+<footer>
+    <p>半块土豆切丝的个人空间</p>
+    <p id="update-time">最后更新时间：正在获取...</p>
+</footer>
 
-</body>
-</html>
+<script>
+fetch('https://api.github.com/repos/okgoodfan-prog/bktdqs/commits/main')
+    .then(response => response.json())
+    .then(data => {
+        const date = new Date(data.commit.committer.date);
+        const formatted = date.toLocaleDateString('zh-CN', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        });
+        document.getElementById('update-time').textContent =
+            '最后更新时间：' + formatted;
+    })
+    .catch(() => {
+        document.getElementById('update-time').textContent =
+            '最后更新时间：暂无';
+    });
+</script>
