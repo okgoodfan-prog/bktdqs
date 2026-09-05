@@ -49,7 +49,43 @@
 </ul>
 </nav>
 </header>
+<!-- 右上角分享按钮 -->
+<button id="share-btn" class="share-btn" aria-label="分享主页">
+    <span class="share-icon">↗</span>
+    <span>分享</span>
+</button>
 
+<!-- 分享弹窗 -->
+<div id="share-modal" class="share-modal">
+    <div class="share-modal-content">
+
+        <button id="share-close" class="share-close" aria-label="关闭">
+            ×
+        </button>
+
+        <h3>分享我的主页</h3>
+
+        <p class="share-description">
+            扫描二维码或复制下方网址即可访问
+        </p>
+
+        <!-- 二维码 -->
+        <div id="qrcode"></div>
+
+        <!-- 当前网址 -->
+        <div class="share-url-box">
+            <input
+                type="text"
+                id="share-url"
+                readonly
+            >
+            <button id="copy-url">复制网址</button>
+        </div>
+
+        <p id="copy-message" class="copy-message"></p>
+
+    </div>
+</div>
 <section id="home" class="hero">
 <h1>半块土豆切丝的个人空间</h1>
 <p>
