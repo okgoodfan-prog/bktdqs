@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>半块土豆切丝的个人空间</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">
+<a href="#home">半块土豆切丝的个人空间</a>
+</div>
+
+<ul>
+<li class="dropdown">
+<a href="#materials">资料</a>
+<ul class="dropdown-menu">
+<li><a href="#bilibili-materials">B站资料（有偿）</a></li>
+<li><a href="#free-materials">免费资料</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#courses">课程</a>
+<ul class="dropdown-menu">
+<li><a href="#course-preview">课程预告</a></li>
+<li><a href="#reading-notes">悦读笔记</a></li>
+<li><a href="#code-course">常用代码讲解课程</a></li>
+<li><a href="#research-experience">一些论文科研经验总结</a></li>
+<li><a href="#empirical-paper-course">实证论文的设计与写作课程</a></li>
+<li><a href="#ssci-course">SSCI写作和投稿专题课程</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#guidance">辅导</a>
+<ul class="dropdown-menu">
+<li><a href="#academic-paper">学术论文</a></li>
+<li><a href="#graduation-thesis">毕业论文</a></li>
+<li><a href="#hourly-guidance">按时计费</a></li>
+</ul>
+</li>
+
+<li><a href="#contact">联系我</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- 右上角分享按钮 -->
+<button id="share-btn" class="share-btn" type="button" aria-label="分享主页">
+    <span class="share-icon">↗</span>
+    <span>分享</span>
+</button>
+
+<!-- 分享弹窗 -->
+<div id="share-modal" class="share-modal" aria-hidden="true">
+    <div class="share-modal-content" role="dialog" aria-modal="true" aria-labelledby="share-title">
+
+        <button id="share-close" class="share-close" type="button" aria-label="关闭">
+            ×
+        </button>
+
+        <h3 id="share-title">分享我的主页</h3>
+
+        <p class="share-description">
+            扫描二维码或复制下方网址即可访问
+        </p>
+
+        <!-- 二维码 -->
+        <div class="qrcode-wrapper">
+            <div id="qrcode"></div>
+        </div>
+
+        <!-- 当前网址 -->
+        <p class="share-url-label">主页网址</p>
+        <div class="share-url-box">
+            <input
+                type="text"
+                id="share-url"
+                readonly
+                aria-label="主页网址"
+            >
+            <button id="copy-url" type="button">复制网址</button>
+        </div>
+
+        <p id="copy-message" class="copy-message" aria-live="polite"></p>
+
+    </div>
+</div>
+
+<section id="home" class="hero">
+<h1>半块土豆切丝的个人空间</h1>
+<p>
+这里用于整理资料、课程内容、论文辅导信息与联系方式。
+</p>
+<p>
+相关内容将持续补充与更新。
+</p>
+</section>
+
+<section id="materials">
+
+<h2>
+资料
+<span>此处涉及的资料主要涵盖B站（半块土豆切丝）更新的视频中相关操作案例数据、案例代码和文献等资料。</span>
+</h2>
+
+<div class="cards">
+
+<div class="card" id="bilibili-materials">
+<h3>B站资料（付费，以下所有资料打包价100）</h3>
+<p>（1）PSM-DID</p>
+<p>（2）门槛模型</p>
+<p>（3）中介效应</p>
+<p>（4）Oprobit</p>
+<p>（5）Stata画图合集</p>
+<p>（6）企业全要素生产率计算</p>
+<p>（7）熵值法</p>
+<p>（8）空间计量</p>
+<p>（9）固定效应</p>
+<p>（10）面板向量自回归（PVAR）</p>
+<p>（11）数据匹配共5个视频全套（见B站专栏：数据处理探索中）</p>
+<p>（12）传统DID（政策时间相同）</p>
+<p>（13）2SLS</p>
+<p>（14）Probit模型</p>
+<p>（15）分位数回归</p>
+<p>（16）泰尔指数、差异系数</p>
+<p>（17）线性插值法的Stata操作</p>
+<p>（18）断点回归</p>
+<p>（19）随机前沿SFA</p>
+<p>（20）Outreg2导出实证结果</p>
+<p>（21）IV-Heckman</p>
+<p>（22）Moranplot绘制Moran散点图</p>
+<p>（23）多期DID（政策时间不同）</p>
+<p>（24）所有直播阅读文献的批注版笔记</p>
+<p>（25）讲故事、理论假设、写文献综述、机制分析等视频涉及的文献＋课件</p>
+<p>（26）Stata实现GDP平减和永续盘存法测算资本存量</p>
+<p>（27）四个常见问题的Stata处理方法（详见B站视频）</p>
+<p>（28）Outreg2做描述性统计以及实证结果导出进阶资料</p>
+</div>
+
+<div class="card" id="free-materials">
+<h3>免费资料</h3>
+<p>敬请期待，后续将会更新。</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="courses">
+
+<h2>
+课程
+<span>包括两大模块，分别是课程预告和已开设课程，目前已经开设的课程包括：悦读笔记、常用代码讲解课程、一些论文科研经验总结、实证论文的设计与写作课程、SSCI写作和投稿专题课程</span>
+<span>目前推出了一款优惠政策，购买两项及以上已开设课程，可以享受八折优惠，购买全部已开设的课程资料，可享受五折优惠。另外，购买了已开设课程后，推荐同学朋友成功购买课程，选购任意一项已开设的课程可享半价优惠。</span>
+</h2>
+
+<div class="publication" id="course-preview">
+<h3 class="sub-title">课程预告</h3>
+<p>科研智能体助手的使用入门与技巧（选题、实证与理论的实操案例与讲解）、如何利用AI有边界有效率地辅助科研系列课程。</p>
+</div>
+
+<div class="publication" id="reading-notes">
+<h3 class="sub-title">悦读笔记</h3>
+<p><strong>课程内容：</strong>根据经济学论文范式进行拆解，逐项突破论文写作与常见的实证问题及其解决方法，涵盖实证论文的几乎所有章节，结合我的课程解读与总结的笔记（20余万字），达到融汇贯通的目的，让你的写作、实证更加规范专业。</p>
+
+<p><strong>课程计划：</strong>可观看录播课（有效时间为6个月）。</p>
+
+<p><strong>目标群体：</strong>科研基础不扎实，读论文费劲或者没有文献阅读习惯，对经济学论文写作和常见实证问题含糊不清，等等。</p>
+
+<p><strong>课程收费：</strong>599/人</p>
+
+<p><strong>开课时间：</strong>已结课，目前提供录播。</p>
+
+<p><strong>课程说明（十分重要）：</strong>1）无法提供发票；2）购买后无法退款；3）提供上课涉及的资料。</p>
+</div>
+
+<div class="publication" id="code-course">
+<h3 class="sub-title">常用代码讲解课程</h3>
+<p><strong>课程内容：</strong>常用代码操作应用和结果解读，这些代码在平常实证过程中非常实用和常用，只有干货没有废话，从常用的数据处理、图形绘制和实证分析技巧等各个方面，合计100项左右，计划分成十次课介绍。</p>
+
+<p><strong>课程计划：</strong>可观看直播课，也可观看录播课（有效时间为6个月）。</p>
+
+<p><strong>目标群体：</strong>Stata基础薄弱，且对常用代码不熟悉不清晰的朋友。</p>
+
+<p><strong>课程收费：</strong>499/人</p>
+
+<p><strong>开课时间：</strong>已开课，尚未结课。</p>
+
+<p><strong>课程说明（十分重要）：</strong>1）无法提供发票；2）购买后无法退款；3）通常使用腾讯会议开展课程；4）提供上课涉及的资料。</p>
+</div>
+
+<div class="publication" id="research-experience">
+<h3 class="sub-title">一些论文科研经验总结</h3>
+<p><strong>课程内容：</strong>结合自身科研经历与同行交流，总结几项写论文和发表论文相关的十分重要的经验。课程一共分成四讲，具体为：第一讲，如何选题并快速写出一篇论文；第二讲，论文写作自省法；第三讲，如何有效修改论文；第四讲，如何在被拒稿后迅速调整并投入“战斗”。</p>
+
+<p><strong>课程计划：</strong>可观看录播课（有效时间为6个月）。</p>
+
+<p><strong>目标群体：</strong>缺乏论文写作和发表经验，且效率较低的朋友。</p>
+
+<p><strong>课程收费：</strong>298/人。</p>
+
+<p><strong>开课时间：</strong>已结课，目前提供录播。</p>
+
+<p><strong>课程说明（十分重要）：</strong>1）无法提供发票；2）提供上课涉及的资料（如果有）；3）购买后不支持退款。</p>
+</div>
+
+<div class="publication" id="empirical-paper-course">
+<h3 class="sub-title">实证论文的设计与写作课程</h3>
+<p><strong>课程内容：</strong>经济与管理类实证论文的前期选题、研究设计、实证工作和整个实证论文的写作内容介绍，经验分享式开展。</p>
+
+<p><strong>课程计划：</strong>可观看录播课（有效时间为6个月）。</p>
+
+<p><strong>目标群体：</strong>基础中等偏弱的朋友，对实证论文的设计和各章节的专业写作尚不清楚。</p>
+
+<p><strong>课程收费：</strong>399/人</p>
+
+<p><strong>开课时间：</strong>已结课，目前提供录播。</p>
+
+<p><strong>课程说明（十分重要）：</strong>1）无法提供发票；2）购买后无法退款；3）提供上课涉及的资料。</p>
+</div>
+
+<div class="publication" id="ssci-course">
+<h3 class="sub-title">SSCI写作和投稿专题课程</h3>
+<p><strong>课程内容：</strong>规范的SSCI写作范式、选刊和投稿、常用工具介绍、一些模板、审稿人视角下的SSCI评审，内容全面系统。</p>
+
+<p><strong>课程计划：</strong>可观看录播课（有效时间为6个月）。</p>
+
+<p><strong>目标群体：</strong>特别适用没有SSCI写作和投稿经验的小白。</p>
+
+<p><strong>课程收费：</strong>799/人</p>
+
+<p><strong>开课时间：</strong>已结课，目前提供录播。</p>
+
+<p><strong>课程说明（十分重要）：</strong>1）无法提供发票；2）购买后无法退款；3）提供上课涉及的资料。</p>
+</div>
+
+</section>
+
+<section id="guidance">
+
+<h2>
+辅导
+<span>涵盖三种类型，分别为学术论文整篇、学位论文整篇、按时计费。</span>
+</h2>
+
+<div class="publication" id="academic-paper">
+<h3 class="sub-title">学术论文</h3>
+<p><strong>1、辅导范围</strong></p>
+<p>（1）选题、实证、写作、选刊和投稿等，涵盖论文涉及的各个环节。辅导而不是代做，一对一指导做实证、写论文、选刊和投稿。</p>
+<p>（2）服务结束的标志为：论文投稿至期刊，以第一次投稿为准。</p>
+<p>（3）若论文投稿后有机会返修，则返修期间若需辅导，需按时计费。服务范围仅涵盖初稿写作和完成阶段，请重视这条说明。</p>
+<p>（4）不论是否有科研基础，都欢迎。</p>
+
+<p><strong>2、时间周期</strong></p>
+<p>通常是1-2个月，很大程度上取决于双方的时间情况和顾客的科研基础，可详聊。</p>
+
+<p><strong>3、计费标准</strong></p>
+<p>按照严格的学术标准辅导，以篇数计价，整篇服务计价为1-1.5万。</p>
+
+<p><strong>4、一些说明</strong></p>
+<p>（1）授人以鱼不如授人以渔，更倾向于辅导那些真正想要学做科研的朋友，代做需求勿扰。</p>
+<p>（2）若无选题，可共同沟通确定选题，尽量围绕客户兴趣范围确定选题。一旦确定了选题，不可随意更改。</p>
+<p>（3）没有100%包过服务，只有实打实地确保严格和规范的质量来提升发表率。</p>
+<p>（4）无法开发票。</p>
+<p>（5）未尽事宜，详情需微信沟通。</p>
+</div>
+
+<div class="publication" id="graduation-thesis">
+<h3 class="sub-title">学位论文</h3>
+<p><strong>1、辅导范围</strong></p>
+<p>（1）选题、实证、写作、选刊和投稿等，涵盖论文涉及的各个环节。辅导而不是代做，一对一指导做实证和写论文。</p>
+<p>（2）服务结束的标志为：论文整篇完成且进行了一轮检查。</p>
+<p>（3）若论文送审后需要修改，则修改期间若需辅导，需按时计费。服务范围仅涵盖初稿写作和完成阶段，请重视这条说明。</p>
+<p>（4）不论是否有科研基础，都欢迎。</p>
+
+<p><strong>2、时间周期</strong></p>
+<p>本科论文通常为1个月以内，硕士论文通常为3个月以内，博士论文通常为6个月以内，很大程度上取决于双方的时间情况和顾客的科研基础，可详聊。</p>
+
+<p><strong>3、计费标准</strong></p>
+<p>按照严格的学术标准辅导，以篇数计价，本科论文通常是1万，硕士论文通常是3万，博士论文通常为5万。暂不辅导存在模型推导的学位论文。</p>
+
+<p><strong>4、一些说明</strong></p>
+<p>（1）授人以鱼不如授人以渔，更倾向于辅导那些真正想要学做科研的朋友，代做需求勿扰。</p>
+<p>（2）若无选题，可共同沟通确定选题，尽量围绕客户兴趣范围确定选题。一旦确定了选题，不可随意更改。</p>
+<p>（3）没有100%包过服务，只有实打实地确保严格和规范的质量来提升通过率。</p>
+<p>（4）无法开发票。</p>
+<p>（5）未尽事宜，详情需微信沟通。</p>
+</div>
+
+<div class="publication" id="hourly-guidance">
+<h3 class="sub-title">按时计费</h3>
+
+<p><strong>1、辅导范围</strong></p>
+<p>根据实际科研需求提供一对一辅导，包括选题、研究设计、数据处理、实证分析、论文写作、论文修改、选刊和投稿等。</p>
+
+<p><strong>2、计费标准</strong></p>
+<p>按照实际辅导时间计费，具体收费标准和辅导时间根据具体需求沟通确定，通常每节课（45分钟）不超过400元。</p>
+
+<p><strong>3、适用情况</strong></p>
+<p>适用于具有明确科研问题或具体科研需求，希望针对某一环节进行单独咨询和指导的朋友。</p>
+
+<p><strong>4、一些说明</strong></p>
+<p>（1）按时计费属于科研辅导服务，仅提供指导和建议，不提供代做服务。</p>
+<p>（2）具体辅导内容、时间安排及收费标准需提前沟通确定。</p>
+<p>（3）辅导过程中产生的资料和代码等，根据具体情况提供。</p>
+<p>（4）无法开发票。</p>
+<p>（5）未尽事宜，详情需微信沟通。</p>
+
+</div>
+</section>
+
+<section id="contact">
+<h2>联系我</h2>
+<p>微信号1：bktdqs</p>
+<p>微信号2：bktdqs2</p>
+<p>提醒：加好友请备注需求，例如资料需求、课程需求、辅导需求，若无备注，将会导致申请无法通过，暂不接商业广告与商业合作，敬请见谅！</p>
+</section>
+
+<footer>
+    <p>半块土豆切丝的个人空间</p>
+    <p id="update-time">最后更新时间：正在获取...</p>
+    <p id="busuanzi_container_site_pv" class="site-visit-count">
+        本站访问量：<span id="busuanzi_value_site_pv">正在获取...</span> 次
+    </p>
+</footer>
+
+<script>
+fetch('https://api.github.com/repos/okgoodfan-prog/bktdqs/commits/main')
+    .then(response => response.json())
+    .then(data => {
+        const date = new Date(data.commit.committer.date);
+        const formatted = date.toLocaleDateString('zh-CN', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        });
+        document.getElementById('update-time').textContent =
+            '最后更新时间：' + formatted;
+    })
+    .catch(() => {
+        document.getElementById('update-time').textContent =
+            '最后更新时间：暂无';
+    });
+</script>
+
+<!-- 不蒜子：本站访问量统计 -->
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- QRCode.js：用于生成二维码 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const shareBtn = document.getElementById('share-btn');
+    const shareModal = document.getElementById('share-modal');
+    const shareClose = document.getElementById('share-close');
+    const shareUrl = document.getElementById('share-url');
+    const copyUrl = document.getElementById('copy-url');
+    const copyMessage = document.getElementById('copy-message');
+    const qrcodeContainer = document.getElementById('qrcode');
+
+    /* 始终分享主页本身，不携带 #materials、#courses 等锚点 */
+    const currentUrl = window.location.origin + window.location.pathname;
+
+    shareUrl.value = currentUrl;
+
+    if (typeof QRCode !== 'undefined') {
+        new QRCode(qrcodeContainer, {
+            text: currentUrl,
+            width: 180,
+            height: 180,
+            colorDark: '#12304a',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    } else {
+        qrcodeContainer.textContent = '二维码加载失败，请复制下方网址访问。';
+    }
+
+    function openShareModal() {
+        shareModal.classList.add('show');
+        shareModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeShareModal() {
+        shareModal.classList.remove('show');
+        shareModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        copyMessage.textContent = '';
+    }
+
+    shareBtn.addEventListener('click', openShareModal);
+    shareClose.addEventListener('click', closeShareModal);
+
+    shareModal.addEventListener('click', function (event) {
+        if (event.target === shareModal) {
+            closeShareModal();
+        }
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && shareModal.classList.contains('show')) {
+            closeShareModal();
+        }
+    });
+
+    copyUrl.addEventListener('click', async function () {
+        try {
+            await navigator.clipboard.writeText(currentUrl);
+            copyMessage.textContent = '✓ 网址已复制';
+            copyUrl.textContent = '已复制';
+        } catch (error) {
+            shareUrl.focus();
+            shareUrl.select();
+            shareUrl.setSelectionRange(0, shareUrl.value.length);
+
+            try {
+                document.execCommand('copy');
+                copyMessage.textContent = '✓ 网址已复制';
+                copyUrl.textContent = '已复制';
+            } catch (copyError) {
+                copyMessage.textContent = '请手动复制网址';
+            }
+        }
+
+        setTimeout(function () {
+            copyUrl.textContent = '复制网址';
+            copyMessage.textContent = '';
+        }, 2000);
+    });
+
+});
+</script>
+
+</body>
+</html>
